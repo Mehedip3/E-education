@@ -1,8 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router';
 import { CiSearch } from "react-icons/ci";
+import { NavbarMenu } from '../mockData/Data';
+import { PiShoppingCartThin } from 'react-icons/pi';
+import { MdMenu } from 'react-icons/md';
+import ResponsiveMenu from '../ResponsiveMenu';
 
 const Navber = () => {
+    const [ open, setOpen ] = React.useState(false);
     return (
 
         <>
@@ -10,13 +14,13 @@ const Navber = () => {
         
  
         
-        <div className='container flex justify-between items-center py-8'>
+        <div className='container flex justify-between items-center py-8 lg:mx-8 md:mx-2'>
           {/* logo section */}
           
           <div className='text-2xl flex items-center gap-2 font-bold uppercase'>
           {/* logo */}
-          <p>Mehdi</p>
-          <p className='text-secondary'>Edu</p>
+        
+          <p className='md:mx-5'>DO<span className='text-secondary'>NUM</span></p>
 
           </div>
        
@@ -25,13 +29,27 @@ const Navber = () => {
      
      <div className='hidden md:block'>
 
-        <ul className='flex items-center gap-6 text-gray-600 '>
+     {/* old navber */}
+
+        {/* <ul className='flex items-center gap-6 text-gray-600 '>
         
 
         <Link className='inline-block py-1 px-3 hover:text-primary font-semibold' to="/">Home</Link>
        <Link className='inline-block py-1 px-3 hover:text-primary font-semibold' to="/about">About</Link>
         <Link className='inline-block py-1 px-3 hover:text-primary font-semibold' to="/contact">Conatct </Link>
 
+        </ul> */}
+
+        {/* ---- new navbar */}
+
+        <ul className='flex items-center gap-6 text-gray-600'>
+            {NavbarMenu.map((item) => {
+                return(
+                    <li key={item.id}>
+                    <a href={item.link} className='inline-block py-1 px-3 hover:text-primary font-semibold'>{item.title}</a>
+                    </li>
+                );
+            })}
         </ul>
 
 
@@ -39,26 +57,38 @@ const Navber = () => {
       
       {/* Icon section */}
 
-     <div>
+     <div className='flex items-center gap-4'>
         <button className='text-2xl hover:bg-primary hover:text-white rounded-full p-2 duration-200'>
         <CiSearch />
         </button>
+
+        <button className='text-2xl hover:bg-primary hover:text-white rounded-full p-2 duration-200'>
+        <PiShoppingCartThin />
+        </button> 
+
+            {/* btn */}
+
+            <button className='hover:bg-primary text-primary font-semibold hover:text-white rounded-md border-2 border-primary px-6 py-2 duration-200 hidden md:block'>Login</button>
+
      </div>
 
 
       {/* Mobile ber section */}
 
+      <div className='md:hidden' onClick={() =>
+      setOpen(!open)}>
+        <MdMenu className='text-4xl'/>
+      </div>
+
         </div>
-  
-
-
-
-    </nav>
+        </nav>
            {/* mobile side ber section */}
             
+            <ResponsiveMenu open={open} />
+
         </>
 
     );
 };
 
-export default Navber;
+export default Navber; 

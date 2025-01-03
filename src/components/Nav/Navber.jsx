@@ -4,6 +4,7 @@ import { NavbarMenu } from '../mockData/Data';
 import { PiShoppingCartThin } from 'react-icons/pi';
 import { MdMenu } from 'react-icons/md';
 import ResponsiveMenu from '../ResponsiveMenu';
+import { FaBookOpen } from 'react-icons/fa';
 
 const Navber = () => {
     const [ open, setOpen ] = React.useState(false);
@@ -14,11 +15,12 @@ const Navber = () => {
         
  
         
-        <div className='container flex justify-between items-center py-8 lg:mx-8 md:mx-2'>
+        <div className='container mx-auto flex justify-between items-center py-8'>
           {/* logo section */}
           
           <div className='text-2xl flex items-center gap-2 font-bold uppercase'>
           {/* logo */}
+          <FaBookOpen />
         
           <p className='md:mx-5'>DO<span className='text-secondary'>NUM</span></p>
 

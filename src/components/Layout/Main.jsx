@@ -6,13 +6,20 @@ import About from '../About/About';
 import { Route, Routes } from 'react-router';
 import Contact from '../Contact';
 import Hero from '../Hero/Hero';
+import Layout from './Layout';
+
+
 
 const Main = () => {
     return (
         <div className='overflow-x-hidden'>
         <Navber />
         <Routes>
+        {/* <Route path="/" element={ <Layout /> } /> */}
+        {/* <Route index element={<Home />} /> */}
+        
             <Route path="/" element={<Home />} />
+
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact/>} />
             <Route path="/hero" element={<Hero /> } />

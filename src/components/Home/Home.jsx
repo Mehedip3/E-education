@@ -1,11 +1,13 @@
 import React from 'react';
+import Hero from '../Hero/Hero';
 
 const Home = () => {
     return (
-        <div>
-            <h1 className='text-4xl'>This home page</h1>
-            <button className='btn btn-primary'>Submit</button>
-        </div>
+    
+            <Hero>
+                
+            </Hero>
+        
     );
 };
 

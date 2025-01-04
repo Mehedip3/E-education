@@ -13,18 +13,18 @@ export const NavbarMenu = [
     {
         id:3,
         title: "Contact",
-        link: "/"
+        link: "/contact"
     },
 
     {
         id:4,
         title: "Service",
-        link: "/"
+        link: "/service"
     },
     {
         id:5,
         title: "Program",
-        link: "/"
+        link: "/program"
     },
     
 ]

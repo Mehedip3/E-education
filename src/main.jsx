@@ -5,6 +5,7 @@ import './index.css'
 
 import { BrowserRouter } from 'react-router'
 
+
 import Main from './components/Layout/Main'
 
 
@@ -12,7 +13,9 @@ createRoot(document.getElementById('root')).render(
   <StrictMode>
 
   <BrowserRouter>
+
   <Main />
+
 
   </BrowserRouter>
     

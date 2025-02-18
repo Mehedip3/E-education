@@ -1,4 +1,6 @@
 
+import cov3 from "../../assets/images/cov3.jpg"
+
 export const NavbarMenu = [
     {
         id:1,
@@ -27,4 +29,66 @@ export const NavbarMenu = [
         link: "/program"
     },
     
+]
+
+
+
+
+export const ProductsData = [
+    {
+        id: 1,
+        category: "Yoga",
+        image: cov3,
+        info: "info",
+        price: "price"
+        
+    },
+
+    {
+        id: 2,
+        category: "Yoga",
+        image: cov3,
+        info: "info",
+        price: "price"
+        
+    },
+
+     {
+        id: 3,
+        category: "Yoga",
+        image: cov3,
+        info: "info",
+        price: "price"
+        
+    },
+
+     {
+        id: 4,
+        category: "Yoga",
+        image: cov3,
+        info: "info",
+        price: "price"
+        
+    },
+
+
+     {
+        id: 5,
+        category: "Yoga",
+        image: cov3,
+        info: "info",
+        price: "price"
+        
+    },
+
+     {
+        id: 6,
+        category: "Yoga",
+        image: cov3,
+        info: "info",
+        price: "price"
+        
+    },
+
+
 ]

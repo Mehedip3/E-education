@@ -46,7 +46,7 @@ export const ProductsData = [
 
     {
         id: 2,
-        category: "Yoga",
+        category: "Fitness",
         image: cov3,
         info: "info",
         price: "price"
@@ -55,7 +55,7 @@ export const ProductsData = [
 
      {
         id: 3,
-        category: "Yoga",
+        category: "Musels",
         image: cov3,
         info: "info",
         price: "price"
